@@ -3,8 +3,8 @@
 namespace App\Repository;
 
 use App\Entity\GrumpyPizza;
-use Doctrine\Bundle\DoctrineBundle\Repository\EntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityRepository;
 
 /**
  * @method GrumpyPizza|null find($id, $lockMode = null, $lockVersion = null)
@@ -12,12 +12,8 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method GrumpyPizza[]    findAll()
  * @method GrumpyPizza[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class GrumpyPizzaRepository extends extends EntityRepository
+class GrumpyPizzaRepository extends EntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
-    {
-        parent::__construct($registry, GrumpyPizza::class);
-    }
 
     // /**
     //  * @return GrumpyPizza[] Returns an array of GrumpyPizza objects

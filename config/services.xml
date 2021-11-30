@@ -7,11 +7,10 @@
     <services>
         <defaults autowire="true" autoconfigure="true" public="false" />
 
-        <service id="App\GrummyPizzaRepository">
+        <service id="App\Repository\GrumpyPizzaRepository">
             <factory service="doctrine.orm.default_entity_manager" method="getRepository" />
             <argument>App\Entity\GrummyPizza</argument>
         </service>
-
 
     </services>
 </container>
